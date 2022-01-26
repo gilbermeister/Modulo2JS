@@ -15,3 +15,9 @@ document.write('3'===3)
 alert('Hola mundo, desde un archivo externo')
 alert(4>3)
 alert('3'===3)
+
+//Métodos de entrada de datos por el usuario sin HTML
+prompt('Por favor ingresa tu nombre')
+
+//combinamos una salida con una entrada
+document.write(prompt('Por favor ingresa tu nombre para mostrarlo en pantalla'))
