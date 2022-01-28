@@ -1,10 +1,17 @@
 //variables
-var nombreCompleto, nacimiento, year, edad;
-nombreCompleto = prompt('Ingresa tu nombre completo');
+var nombreCompleto, nacimiento, year, edad, msg, cantidadCaracteres;
+nombreCompleto = prompt('Ingresa tu nombre completo').toUpperCase().trim(); //trim corta los espacios en los extremos del string
 nacimiento = Number(prompt('Ingresa tu año de nacimiento'));
 year = Number(prompt('Ingresa el año actual'));
 
-if(nombreCompleto != null && nacimiento != 0 && year != 0){
+//cantidad de caracteres 
+cantidadCaracteres = nombreCompleto.length;
+console.log(cantidadCaracteres);
+
+if(nacimiento > year){
+    msg = "El año de nacimiento no puede ser mayor al actual";
+} else {
+if(nombreCompleto != '' && nacimiento != 0 && year != 0){
 
 
 
@@ -18,14 +25,22 @@ if(edad>=18){
 
 //Anidados
 if(edad<=12){
-    alert(`Hola ${nombreCompleto}, eres un niño`);
+    msg = `Hola ${nombreCompleto}, eres un niño`;
 } else if(edad > 12 && edad < 18){
-    alert(`Hola ${nombreCompleto}, eres un adolescente`);
+    msg = `Hola ${nombreCompleto}, eres un adolescente`;
 } else if(edad >= 18 && edad <=65){
-    alert(`Hola ${nombreCompleto}, eres un adulto`);
+    msg = `Hola ${nombreCompleto}, eres un adulto`;
 } else {
-    alert(`Hola ${nombreCompleto}, eres un anciano`);
+    msg = `Hola ${nombreCompleto}, eres un anciano`;
 }
-}else{
-    alert('No ingresaste correctamente los datos')
 }
+else{
+    msg = 'No ingresaste correctamente los datos';
+}
+}
+
+//salida de datos
+alert(msg);
+
+var verduras = ["cebolla", "perejil", "tomate", "calabaza", "broccoli"];
+alert(verduras.slice(1,3));
