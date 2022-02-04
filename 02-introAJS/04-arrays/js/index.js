@@ -31,9 +31,20 @@ var arrayCombinado = [];
 miembrosFamilia = prompt("Escribe los nombres completos de los miembros de tu familia separados por comas");
 arrayFamilia = miembrosFamilia.split(',');
 
+if(nombre === "" || apellido1 === "" || apellido2 === "" || miembrosFamilia === "")
+{
+    alert("Dejaste algunos campos vacíos");
+}
+else if(miembrosFamilia.includes(",") === false)
+{
+    alert("Por favor separa los nombres con coma");
+}
+else{
+
 console.log(arrayFamilia);
 
 arrayCombinado = arrayNombre.concat(arrayFamilia);
 arrayCombinado.reverse();
 
 alert(arrayCombinado);
+}
