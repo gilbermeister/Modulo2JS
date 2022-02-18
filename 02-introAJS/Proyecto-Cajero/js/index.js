@@ -27,14 +27,15 @@ function CapturaCliente(){
             }else{
                 count = count + 1;
             }
+        }
     }
-}
-if(access === false && count < 3){
+
+    if(access === false && count < 3){
     alert("La contraseña es incorrecta, intenta nuevamente.");
-}else if(access === false){
-    alert("Superaste el máximo número de intentos");
-    document.getElementById("enviar").disabled = true;
-}
+    } else if(access === false){
+        alert("Superaste el máximo número de intentos");
+        document.getElementById("enviar").disabled = true;
+    }
 return cliente;
 }
 
