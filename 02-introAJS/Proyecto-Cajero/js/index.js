@@ -6,6 +6,7 @@ var cuentas = [
 
 var nombreCliente, passCliente, access, parametro,index, monto;
 var cliente = {};
+var count = 0;
 
 function CapturaCliente(){
     nombreCliente = document.getElementById('nombreCuenta').value;
@@ -23,11 +24,16 @@ function CapturaCliente(){
                     nombre: cuentas[i].nombre,
                     saldo: cuentas[i].saldo
                 }
+            }else{
+                count = count + 1;
             }
     }
 }
-if(access === false){
+if(access === false && count < 3){
     alert("La contraseña es incorrecta, intenta nuevamente.");
+}else if(access === false){
+    alert("Superaste el máximo número de intentos");
+    document.getElementById("enviar").disabled = true;
 }
 return cliente;
 }
@@ -95,8 +101,3 @@ function CapturarDatos(id){
         }
     }
 }
-//Consultar saldo
-
-//Ingresar monto
-
-//Retirar monto
