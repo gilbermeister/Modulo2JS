@@ -91,6 +91,7 @@ function CapturarDatos(id){
         document.getElementById("saldo").innerText = "";
         operaciones.innerText = '';
         imprimirTotal.innerText = 0;
+        document.getElementById("enviar").disabled = true;
     }else{
         numero = Number(id);
         if(imprimirTotal.innerText === '0' || operador ===1){
