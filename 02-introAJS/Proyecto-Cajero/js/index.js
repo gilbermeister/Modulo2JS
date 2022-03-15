@@ -5,7 +5,6 @@ var cuentas = [
 ]
 
 var nombreCliente, passCliente, access, parametro,index, monto;
-var cliente = {};
 var count = 0;
 
 function CapturaCliente(){
@@ -20,10 +19,6 @@ function CapturaCliente(){
                 index = i;
                 console.log("Access granted"); 
                 document.getElementById('greeting').innerText = "Bienvenido " + nombreCliente;
-                cliente = {
-                    nombre: cuentas[i].nombre,
-                    saldo: cuentas[i].saldo
-                }
             }else{
                 count = count + 1;
             }
@@ -36,7 +31,7 @@ function CapturaCliente(){
         alert("Superaste el máximo número de intentos");
         document.getElementById("enviar").disabled = true;
     }
-return cliente;
+
 }
 
 function CapturarDatos(id){

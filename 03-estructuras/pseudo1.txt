@@ -1,0 +1,9 @@
+algoritmo Par
+variables entero a, flotante b
+
+inicio
+escribir ("dame número para saber si es par (entero)"
+leer(a)
+b<-a%2
+si b=0, escribir "Par"
+si no, escribir "Impar"
